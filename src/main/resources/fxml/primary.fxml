@@ -4,73 +4,77 @@
 <?import javafx.scene.layout.*?>
 <?import java.net.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.FXMLController">
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.FXMLController">
     <stylesheets>
         <URL value="@../styles/Styles.css" />
     </stylesheets>
     <children>
-        <VBox spacing="20" layoutX="20" layoutY="20" prefWidth="760">
-            <!-- Title -->
-            <Label text="Plutus" styleClass="title-label" />
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <VBox spacing="20" fillWidth="true">
+                    <!-- Title -->
+                    <Label text="Plutus" styleClass="title-label" />
 
-            <!-- Ground Floor -->
-            <Label text="Ground Floor" styleClass="floor-label" />
-            <TilePane fx:id="groundFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
-                <!-- Room Blocks will be added here -->
-                <children>
-                    <Label text="Room 1" styleClass="room-label" />
-                    <Label text="Room 2" styleClass="room-label" />
-                    <Label text="Room 3" styleClass="room-label" />
-                    <Label text="Room 4" styleClass="room-label" />
-                    <Label text="Room 5" styleClass="room-label" />
-                    <Label text="Room 6" styleClass="room-label" />
-                    <Label text="Room 7" styleClass="room-label" />
-                </children>
-            </TilePane>
+                    <!-- Ground Floor -->
+                    <Label text="Ground Floor" styleClass="floor-label" />
+                    <TilePane fx:id="groundFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
+                        <!-- Room Blocks will be added here -->
+                        <children>
+                            <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                        </children>
+                    </TilePane>
 
-            <!-- First Floor -->
-            <Label text="First Floor" styleClass="floor-label" />
-            <TilePane fx:id="firstFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
-                <!-- Room Blocks will be added here -->
-                <children>
-                    <Label text="Room 1" styleClass="room-label" />
-                    <Label text="Room 2" styleClass="room-label" />
-                    <Label text="Room 3" styleClass="room-label" />
-                    <Label text="Room 4" styleClass="room-label" />
-                    <Label text="Room 5" styleClass="room-label" />
-                    <Label text="Room 6" styleClass="room-label" />
-                    <Label text="Room 7" styleClass="room-label" />
-                    <Label text="Room 8" styleClass="room-label" />
-                    <Label text="Room 9" styleClass="room-label" />
-                    <Label text="Room 10" styleClass="room-label" />
-                    <Label text="Room 11" styleClass="room-label" />
-                    <Label text="Room 12" styleClass="room-label" />
-                    <Label text="Room 13" styleClass="room-label" />
-                </children>
-            </TilePane>
+                    <!-- First Floor -->
+                    <Label text="First Floor" styleClass="floor-label" />
+                    <TilePane fx:id="firstFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
+                        <!-- Room Blocks will be added here -->
+                        <children>
+                            <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 8" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 9" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 10" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 11" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 12" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 13" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                        </children>
+                    </TilePane>
 
-            <!-- Second Floor -->
-            <Label text="Second Floor" styleClass="floor-label" />
-            <TilePane fx:id="secondFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
-                <!-- Room Blocks will be added here -->
-                <children>
-                    <Label text="Room 1" styleClass="room-label" />
-                    <Label text="Room 2" styleClass="room-label" />
-                    <Label text="Room 3" styleClass="room-label" />
-                    <Label text="Room 4" styleClass="room-label" />
-                    <Label text="Room 5" styleClass="room-label" />
-                    <Label text="Room 6" styleClass="room-label" />
-                    <Label text="Room 7" styleClass="room-label" />
-                    <Label text="Room 8" styleClass="room-label" />
-                    <Label text="Room 9" styleClass="room-label" />
-                    <Label text="Room 10" styleClass="room-label" />
-                    <Label text="Room 11" styleClass="room-label" />
-                    <Label text="Room 12" styleClass="room-label" />
-                    <Label text="Room 13" styleClass="room-label" />
-                    <Label text="Room 14" styleClass="room-label" />
-                    <Label text="Room 15" styleClass="room-label" />
-                </children>
-            </TilePane>
-        </VBox>
+                    <!-- Second Floor -->
+                    <Label text="Second Floor" styleClass="floor-label" />
+                    <TilePane fx:id="secondFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane">
+                        <!-- Room Blocks will be added here -->
+                        <children>
+                            <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 8" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 9" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 10" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 11" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 12" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 13" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 14" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                            <Button text="Room 15" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                        </children>
+                    </TilePane>
+                </VBox>
+            </content>
+        </ScrollPane>
     </children>
 </AnchorPane>

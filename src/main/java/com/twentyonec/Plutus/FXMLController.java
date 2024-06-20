@@ -1,29 +1,34 @@
 package com.twentyonec.Plutus;
-/*
-Put header here
 
-
- */
-
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
-public class FXMLController implements Initializable {
-    
+import java.io.IOException;
+
+public class FXMLController {
+
     @FXML
-    private Label lblOut;
-    
-    @FXML
-    private void btnClickAction(ActionEvent event) {
-        lblOut.setText("Hello World!");
+    private void handleRoomButtonAction(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        String roomName = button.getText();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/room.fxml"));
+            Parent root = loader.load();
+
+            RoomController controller = loader.getController();
+            controller.setRoomName(roomName);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
 }
