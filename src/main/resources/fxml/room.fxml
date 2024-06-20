@@ -2,12 +2,22 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.RoomController" alignment="CENTER" spacing="10" prefWidth="400" prefHeight="300">
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.RoomController">
+    <stylesheets>
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
     <children>
-        <Label fx:id="roomLabel" styleClass="title-label" />
-        <Button text="Book" onAction="#handleBookAction" />
-        <Button text="Vacate" onAction="#handleVacateAction" />
-        <Button text="Return" onAction="#handleReturnAction" />
+        <VBox alignment="CENTER" spacing="20" layoutX="20" layoutY="20" prefWidth="760">
+            <Label fx:id="roomLabel" styleClass="title-label" />
+            <TilePane hgap="10" vgap="10" prefColumns="3" alignment="CENTER">
+                <children>
+                    <Button text="Book" onAction="#handleBookAction" styleClass="room-label" />
+                    <Button text="Vacate" onAction="#handleVacateAction" styleClass="room-label" />
+                    <Button text="Return" onAction="#handleReturnAction" styleClass="room-label" />
+                </children>
+            </TilePane>
+        </VBox>
     </children>
-</VBox>
+</AnchorPane>
