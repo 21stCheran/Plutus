@@ -199,3 +199,40 @@ http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
     -fx-text-fill: black;
 
 }
+/* style.css */
+.title-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+}
+
+.floor-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+.room-pane {
+    -fx-padding: 10;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.room-label {
+    -fx-border-color: #aaa;
+    -fx-border-width: 1px;
+    -fx-padding: 10;
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 50px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 3, 0.5, 0, 0);
+}
+
