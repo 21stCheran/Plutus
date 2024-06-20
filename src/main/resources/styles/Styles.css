@@ -199,40 +199,45 @@ http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
     -fx-text-fill: black;
 
 }
-/* style.css */
+/* General styles */
+.root {
+    -fx-background-color: #f0f0f0; /* Light grey background for the entire application */
+}
+
+/* Title label */
 .title-label {
     -fx-font-size: 36px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333;
+    -fx-text-fill: #333; /* Dark grey text color */
     -fx-alignment: center;
 }
 
+/* Floor labels */
 .floor-label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #555;
+    -fx-text-fill: #00509e; /* Blue text color */
+    -fx-padding: 10px 0;
 }
 
+/* Room blocks */
 .room-pane {
     -fx-padding: 10;
-    -fx-background-color: #f9f9f9;
-    -fx-border-color: #ddd;
-    -fx-border-width: 1px;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
 }
 
 .room-label {
-    -fx-border-color: #aaa;
-    -fx-border-width: 1px;
-    -fx-padding: 10;
-    -fx-background-color: #fff;
-    -fx-background-radius: 5px;
-    -fx-font-size: 14px;
-    -fx-text-fill: #333;
+    -fx-background-color: #ffffff; /* White background color for room blocks */
+    -fx-border-color: #d3d3d3; /* Light grey border color */
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 20px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #333; /* Dark grey text color */
     -fx-alignment: center;
-    -fx-pref-width: 80px;
-    -fx-pref-height: 50px;
-    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 3, 0.5, 0, 0);
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 1); /* Subtle shadow effect */
+    -fx-min-width: 100px;
+    -fx-min-height: 50px;
 }
+
 
