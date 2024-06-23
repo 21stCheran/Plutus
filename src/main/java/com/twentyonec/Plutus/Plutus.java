@@ -7,10 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
-public class MainApp extends Application {
+public class Plutus extends Application {
     private static Stage stage;
 
     @Override
@@ -36,7 +35,7 @@ public class MainApp extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/fxml/" + fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Plutus.class.getResource("/fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
@@ -44,7 +43,8 @@ public class MainApp extends Application {
         launch(args);
     }
     
-    public static Stage getStage() {
+    @SuppressWarnings("exports")
+	public static Stage getStage() {
     	return stage;
     }
 }

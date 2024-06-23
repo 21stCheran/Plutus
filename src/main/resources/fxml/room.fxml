@@ -3,8 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import java.net.*?>
+<?import com.twentyonec.Plutus.*?>
 
-<AnchorPane fx:id="anchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.RoomController">
+<AnchorPane fx:id="anchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.twentyonec.Plutus.controller.RoomController">
     <stylesheets>
         <URL value="@../styles/Styles.css" />
     </stylesheets>

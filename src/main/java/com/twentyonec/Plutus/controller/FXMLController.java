@@ -1,4 +1,4 @@
-package com.twentyonec.Plutus;
+package com.twentyonec.Plutus.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +13,8 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import com.twentyonec.Plutus.Plutus;
 
 public class FXMLController {
 
@@ -48,13 +50,13 @@ public class FXMLController {
         String roomName = button.getText();
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/fxml/" + "room" + ".fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Plutus.class.getResource("/fxml/" + "room" + ".fxml"));
             Parent root = fxmlLoader.load();
 
             RoomController controller = fxmlLoader.getController();
             controller.setRoomName(roomName);
 
-            Stage stage = MainApp.getStage();
+            Stage stage = Plutus.getStage();
             Rectangle2D screenSize = Screen.getPrimary().getVisualBounds();
             Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight());
 
