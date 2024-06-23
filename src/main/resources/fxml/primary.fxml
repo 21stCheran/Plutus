@@ -19,13 +19,13 @@
             <TilePane fx:id="groundFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane" alignment="TOP_LEFT">
                 <!-- Room Blocks will be added here -->
                 <children>
-                    <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G1" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G2" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G3" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G4" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G5" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G6" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="G7" styleClass="room-label" onAction="#handleRoomButtonAction" />
                 </children>
             </TilePane>
 
@@ -34,19 +34,19 @@
             <TilePane fx:id="firstFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane" alignment="TOP_LEFT">
                 <!-- Room Blocks will be added here -->
                 <children>
-                    <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 8" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 9" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 10" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 11" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 12" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 13" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="101" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="102" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="103" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="104" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="105" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="106" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="107" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="108" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="109" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="110" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="111" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="112" styleClass="room-label" onAction="#handleRoomButtonAction"/>
+                    <Button text="113" styleClass="room-label" onAction="#handleRoomButtonAction" />
                 </children>
             </TilePane>
 
@@ -55,21 +55,21 @@
             <TilePane fx:id="secondFloorPane" hgap="10" vgap="10" prefColumns="7" styleClass="room-pane" alignment="TOP_LEFT">
                 <!-- Room Blocks will be added here -->
                 <children>
-                    <Button text="Room 1" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 2" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 3" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 4" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 5" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 6" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 7" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 8" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 9" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 10" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 11" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 12" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 13" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 14" styleClass="room-label" onAction="#handleRoomButtonAction" />
-                    <Button text="Room 15" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="201" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="202" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="203" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="204" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="205" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="206" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="207" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="208" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="209" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="210" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="211" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="212" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="213" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="214" styleClass="room-label" onAction="#handleRoomButtonAction" />
+                    <Button text="215" styleClass="room-label" onAction="#handleRoomButtonAction" />
                 </children>
             </TilePane>
         </VBox>
