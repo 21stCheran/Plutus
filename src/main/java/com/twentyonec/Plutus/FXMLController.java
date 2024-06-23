@@ -3,12 +3,13 @@ package com.twentyonec.Plutus;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,16 +48,27 @@ public class FXMLController {
         String roomName = button.getText();
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/room.fxml"));
-            Parent root = loader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/fxml/" + "room" + ".fxml"));
+            Parent root = fxmlLoader.load();
 
-            RoomController controller = loader.getController();
+            RoomController controller = fxmlLoader.getController();
             controller.setRoomName(roomName);
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
+            Stage stage = MainApp.getStage();
+            Rectangle2D screenSize = Screen.getPrimary().getVisualBounds();
+            Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight());
+
+            // Set the new scene
+            stage.setScene(scene);
+            stage.show();
+
+            // Ensure the window is maximized after the scene is set
+            stage.setMaximized(true);
+            stage.setMaximized(false);
+            stage.setMaximized(true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

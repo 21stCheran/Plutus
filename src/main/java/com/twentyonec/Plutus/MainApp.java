@@ -2,8 +2,10 @@ package com.twentyonec.Plutus;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,17 +17,20 @@ public class MainApp extends Application {
     public void start(@SuppressWarnings("exports") Stage s) throws IOException {
         stage = s;
         setRoot("primary", "Plutus");
-        stage.setMaximized(true); // Ensure the window is maximized
         stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
+    	stage.setMaximized(true); // Ensure the window is maximized
         setRoot(fxml, stage.getTitle());
     }
 
     static void setRoot(String fxml, String title) throws IOException {
-        Scene scene = new Scene(loadFXML(fxml));
+    	stage.setMaximized(true); // Ensure the window is maximized
+    	Rectangle2D screenSize = Screen.getPrimary().getVisualBounds();
+        Scene scene = new Scene(loadFXML(fxml), screenSize.getWidth(), screenSize.getHeight());
         stage.setTitle(title);
+        stage.setMaximized(true);
         stage.setScene(scene);
         stage.show();
     }
@@ -37,5 +42,9 @@ public class MainApp extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public static Stage getStage() {
+    	return stage;
     }
 }
