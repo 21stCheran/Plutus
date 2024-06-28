@@ -1,7 +1,7 @@
 package com.twentyonec.Plutus.config;
 
 public class StorageConfig extends Config {
-	private static String CONFIG_PATH = "storage_config";
+	private static final String CONFIG_PATH = "storage_config";
 
     private final String USERNAME_PATH = "mysql.username";
     private final String PASSWORD_PATH = "mysql.password";

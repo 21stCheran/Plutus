@@ -39,6 +39,8 @@ public class RoomController {
         // Implement vacate logic here
         System.out.println(roomName + " vacated.");
     }
+    
+    //TODO -> Implement extend button
 
     @FXML
     private void handleReturnAction(ActionEvent event) {

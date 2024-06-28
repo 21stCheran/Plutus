@@ -2,7 +2,7 @@ package com.twentyonec.Plutus.hotel;
 
 public class Room {
 	
-	private int roomID;
+	private String roomID;
 	private boolean booked;
 	private OccupancyType occupancyType;
 	private boolean isAC;
@@ -12,15 +12,17 @@ public class Room {
 	private int price = 0;
 	private int deposit = 0;
 	
-	public Room(int roomID, OccupancyType occupancyType, boolean isAC, boolean isTV, boolean isExtra) {
-		this.roomID = roomID;
-		this.occupancyType = occupancyType;
-		this.isAC = isAC;
-		this.isTV = isTV;
-		this.isExtra = isExtra;
-		
-		this.setupRevenue();
-	}
+	public Room(String roomID, OccupancyType occupancyType, boolean isAC, boolean isTV, boolean isExtra) {
+        this.roomID = roomID;
+        this.occupancyType = occupancyType;
+        this.isAC = isAC;
+        this.isTV = isTV;
+        this.isExtra = isExtra;
+
+        this.setupRevenue();
+        
+        //TODO get booked or not from storage.
+    }
 	
 	private void setupRevenue() {
 		

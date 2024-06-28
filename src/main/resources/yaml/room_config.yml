@@ -1,110 +1,147 @@
 ground_floor:
   - id: "G1"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "triple"
   - id: "G2"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "G3"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "triple"
   - id: "G4"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "quadruple"
   - id: "G5"
-    is_tv: false
+    is_tv: true
     is_ac: true
+    type: "quadruple"
   - id: "G6"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "double"
   - id: "G7"
     is_tv: false
     is_ac: true
+    type: "triple"
 
 first_floor:
   - id: "101"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "102"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "103"
     is_tv: true
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "104"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "105"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "106"
     is_tv: true
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "107"
     is_tv: true
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "108"
-    is_tv: false
+    is_tv: true
     is_ac: true
+    type: "single"
   - id: "109"
     is_tv: false
     is_ac: true
+    type: "double"
   - id: "110"
-    is_tv: false
+    is_tv: true
     is_ac: true
+    type: "double"
   - id: "111"
-    is_tv: false
+    is_tv: true
     is_ac: true
+    type: "double"
   - id: "112"
-    is_tv: false
+    is_tv: true
     is_ac: true
+    type: "triple"
   - id: "113"
     is_tv: false
     is_ac: true
+    type: "triple"
 
 second_floor:
   - id: "201"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "202"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "203"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "double"
   - id: "204"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "205"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "double"
   - id: "206"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "207"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "double"
   - id: "208"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "209"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "double"
   - id: "210"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "double"
   - id: "211"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "212"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
   - id: "213"
-    is_tv: false
-    is_ac: true
+    is_tv: true
+    is_ac: false
+    type: "triple"
   - id: "214"
     is_tv: false
     is_ac: true
+    type: single
   - id: "215"
     is_tv: false
-    is_ac: true
+    is_ac: false
+    type: "single"
+    
+    ##gotta update 214 not mentioned in picture.

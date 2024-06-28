@@ -10,14 +10,12 @@ import com.twentyonec.Plutus.Plutus;
 
 public abstract class Config {
 	protected Map<String, Object> yamlData;
-	protected String CONFIG_PATH;
 
 	public Config(String CONFIG_PATH) {
-		this.CONFIG_PATH = CONFIG_PATH;
 		try {
-			URL resource = Plutus.class.getResource("/yaml/" + this.CONFIG_PATH + ".yml");
+			URL resource = Plutus.class.getResource("/yaml/" + CONFIG_PATH + ".yml");
 			if (resource == null) {
-				throw new IllegalStateException("Could not find the " + this.CONFIG_PATH + ".yml file.");
+				throw new IllegalStateException("Could not find the " + CONFIG_PATH + ".yml file.");
 			}
 
 			InputStream inputStream = resource.openStream();
