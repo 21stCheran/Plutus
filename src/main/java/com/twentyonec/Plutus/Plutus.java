@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.IOException;
+import com.twentyonec.Plutus.config.*;
+
 
 public class Plutus extends Application {
     private static Stage stage;
