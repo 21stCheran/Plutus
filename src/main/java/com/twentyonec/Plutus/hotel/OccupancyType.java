@@ -1,4 +1,4 @@
-package com.twentyonec.Plutus.Hotel;
+package com.twentyonec.Plutus.hotel;
 
 public enum OccupancyType {
 	
