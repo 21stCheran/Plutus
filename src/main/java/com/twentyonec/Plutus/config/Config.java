@@ -34,6 +34,12 @@ public abstract class Config {
 		for (int i = 0; i < keys.length - 1; i++) {
 			currentMap = (Map<String, Object>) currentMap.get(keys[i]);
 		}
-		return currentMap.get(keys[keys.length - 1]).toString();
+		try {
+			return currentMap.get(keys[keys.length - 1]).toString();
+		} catch (Exception e) {
+			//
+		}
+		
+		return null;
 	}
 }

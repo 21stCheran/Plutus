@@ -9,6 +9,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.IOException;
 import com.twentyonec.Plutus.config.*;
+import com.twentyonec.Plutus.storage.Storage;
 
 
 public class Plutus extends Application {
@@ -19,6 +20,9 @@ public class Plutus extends Application {
         stage = s;
         setRoot("primary", "Plutus");
         stage.show();
+        
+        Storage storage = Storage.getStorage();
+        storage.setUpTable();
     }
 
     static void setRoot(String fxml) throws IOException {

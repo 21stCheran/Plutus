@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.twentyonec.Plutus.config.StorageConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -33,9 +34,9 @@ public class Storage {
 	public static synchronized Storage getStorage() {
 
 		if (storage == null) {
-//			final Config config = plugin.getConfigManager();
-//			storage = new Storage(config.getHostname(), config.getPort(), config.getUsername(),
-//					config.getPassword(), config.getDatabase());
+			final StorageConfig config = new StorageConfig();
+			storage = new Storage(config.getHostname(), config.getPort(), config.getUsername(),
+					config.getPassword(), config.getDatabase());
 		}
 
 		return storage;
@@ -47,7 +48,7 @@ public class Storage {
 
 		final HikariConfig config = new HikariConfig();
 
-		config.setPoolName("itemslogger");
+		config.setPoolName("plutus");
 		config.setJdbcUrl(jdbcUrl);
 		config.setUsername(this.username);
 		config.setPassword(this.password);
@@ -129,17 +130,12 @@ public class Storage {
 		this.connect();
 
 //		plugin.debugMessage("Attempting to set up tables if they do not exist.");
-		final String createTableQuery = "CREATE TABLE IF NOT EXISTS itemslogger("
-				+ "uuid VARCHAR(36) NOT NULL, "
-				+ "inventory TEXT NOT NULL, "
-				+ "cause VARCHAR(255) NOT NULL, "
-				+ "loc_x REAL NOT NULL, "
-				+ "loc_y REAL NOT NULL, "
-				+ "loc_z REAL NOT NULL, "
-				+ "experience REAL NOT NULL, "
-				+ "date DATE NOT NULL, "
-				+ "time TIME NOT NULL);";
-		this.update(createTableQuery);
+		final String createRoomTableQuery = "CREATE TABLE IF NOT EXISTS plutus_room("
+				+ "id VARCHAR(3) NOT NULL PRIMARY KEY, "
+				+ "type VARCHAR(9) NOT NULL, "
+				+ "is_tv BOOLEAN NOT NULL, "
+				+ "is_ac BOOLEAN NOT NULL);";
+		this.update(createRoomTableQuery);
 	}
 
 }
