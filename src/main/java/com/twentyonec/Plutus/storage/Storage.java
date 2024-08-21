@@ -5,13 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.twentyonec.Plutus.config.RoomConfig;
 import com.twentyonec.Plutus.config.StorageConfig;
+import com.twentyonec.Plutus.hotel.OccupancyType;
+import com.twentyonec.Plutus.hotel.Room;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 public class Storage {
 	
 	private static Storage storage;
+	private final RoomConfig roomConfig = new RoomConfig();
 	
 	private final String hostname;
 	private final String port;
@@ -126,8 +130,14 @@ public class Storage {
 	}
 	
 	//TODO -> modify into your table(s).
-	public void setUpTable() {
+	public void setUpTables() {
 		this.connect();
+		
+		this.setUpRoomTable();
+		
+	}
+	
+	private void setUpRoomTable() {
 
 //		plugin.debugMessage("Attempting to set up tables if they do not exist.");
 		final String createRoomTableQuery = "CREATE TABLE IF NOT EXISTS plutus_room("
@@ -136,6 +146,39 @@ public class Storage {
 				+ "is_tv BOOLEAN NOT NULL, "
 				+ "is_ac BOOLEAN NOT NULL);";
 		this.update(createRoomTableQuery);
+		
+		final String syncRoomTableData = "INSERT INTO plutus_room"
+										+ "(id, type, is_tv, is_ac) "
+										+  "VALUES (?,?,?,?)";
+		String id;
+		OccupancyType type;
+		boolean isTV;
+		boolean isAC;
+		
+		for (Room room: roomConfig.getAllRooms()) {
+			id = room.getRoomID();
+			type = room.getType();
+			isTV = room.getIsTV();
+			isAC = room.getIsAC();
+			
+			
+		}
+		
+	}
+	
+	private void syncRoom(Room room) {
+		
+		final String syncRoomTableData = "INSERT INTO plutus_room "
+				+ "(id, type, is_tv, is_ac) "
+				+ "VALUES (?,?,?,?) "
+				+ "ON DUPLICATE KEY UPDATE "
+				+ "id = VALUES(id), "
+				+ "type = VALUES(type), "
+				+ "is_tv = VALUES(is_tv), "
+				+ "is_ac = VALUES(is_ac)";
+		
+		this.update(syncRoomTableData, room.getRoomID(), room.getType().toString(), room.getIsTV(), room.getIsAC());
+		System.out.println("DEBUG: Occupancy Type: " + room.getType().toString());
 	}
 
 }

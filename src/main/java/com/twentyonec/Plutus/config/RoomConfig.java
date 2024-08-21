@@ -6,7 +6,7 @@ import java.util.Map;
 import com.twentyonec.Plutus.hotel.OccupancyType;
 import com.twentyonec.Plutus.hotel.Room;
 
-public class RoomConfig extends Config{
+public class RoomConfig extends Config {
 	private static String CONFIG_PATH = "room_config";
 	
 	private static String GROUND_PATH = "ground_floor";
@@ -60,5 +60,34 @@ public class RoomConfig extends Config{
 
         return secondFloorRooms;
     }
+	
+	public Room[] getAllRooms() {
+		
+		Room[] groundFloorRooms = this.getGroundFloor();
+		Room[] firstFloorRooms = this.getFirstFloor();
+		Room[] secondFloorRooms = this.getSecondFloor();
+		
+		Room[] allRooms = new Room[firstFloorRooms.length + secondFloorRooms.length + groundFloorRooms.length];
+		
+		for (int i = 0; i < allRooms.length;) {
+			
+			for (Room room: groundFloorRooms) {
+				allRooms[i] = room;
+				i++;
+			}
+			
+			for (Room room: firstFloorRooms) {
+				allRooms[i] = room;
+				i++;
+			}
+			
+			for (Room room: secondFloorRooms) {
+				allRooms[i] = room;
+				i++;
+			}
+		}
+		
+		return allRooms;
+	}
 
 }

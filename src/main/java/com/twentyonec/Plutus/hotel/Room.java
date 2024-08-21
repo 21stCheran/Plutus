@@ -19,12 +19,12 @@ public class Room {
         this.isTV = isTV;
         this.isExtra = isExtra;
 
-        this.setupRevenue();
+        this.setupDefaultPrice();
         
         //TODO get booked or not from storage.
     }
 	
-	private void setupRevenue() {
+	private void setupDefaultPrice() {
 		
 		this.price += Integer.parseInt(this.occupancyType.getPrice());
 		switch(occupancyType) {
@@ -67,6 +67,27 @@ public class Room {
 	
 	public int[] getPrice() {
 		return new int[]{deposit, price};
+	}
+	
+	public String getRoomID() {
+		return this.roomID;
+	}
+	
+	public OccupancyType getType() {
+		return this.occupancyType;
+	}
+	
+	public boolean getIsTV() {
+		return this.isTV;
+	}
+	
+	public boolean getIsAC() {
+		return this.isAC;
+	}
+	
+	@Override
+	public String toString() {
+		return "Room: " + roomID; 
 	}
 
 
