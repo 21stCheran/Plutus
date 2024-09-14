@@ -138,7 +138,7 @@ second_floor:
   - id: "214"
     is_tv: false
     is_ac: true
-    type: single
+    type: "single"
   - id: "215"
     is_tv: false
     is_ac: false

@@ -147,21 +147,9 @@ public class Storage {
 				+ "is_ac BOOLEAN NOT NULL);";
 		this.update(createRoomTableQuery);
 		
-		final String syncRoomTableData = "INSERT INTO plutus_room"
-										+ "(id, type, is_tv, is_ac) "
-										+  "VALUES (?,?,?,?)";
-		String id;
-		OccupancyType type;
-		boolean isTV;
-		boolean isAC;
-		
 		for (Room room: roomConfig.getAllRooms()) {
-			id = room.getRoomID();
-			type = room.getType();
-			isTV = room.getIsTV();
-			isAC = room.getIsAC();
 			
-			
+			this.syncRoom(room);			
 		}
 		
 	}
@@ -178,7 +166,7 @@ public class Storage {
 				+ "is_ac = VALUES(is_ac)";
 		
 		this.update(syncRoomTableData, room.getRoomID(), room.getType().toString(), room.getIsTV(), room.getIsAC());
-		System.out.println("DEBUG: Occupancy Type: " + room.getType().toString());
+		System.out.println("DEBUG: Room ID: " + room.getRoomID());
 	}
 
 }
